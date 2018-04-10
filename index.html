@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<!-- saved from url=(0015) -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>OSHINE</title>
+<link href="css/index.css" rel="stylesheet" type="text/css">
+<link href="css/font-awesome.css" rel="stylesheet" type="text/css">
+<link href="css/fonts.css" rel="stylesheet" type="text/css">
+<link href="css/icomoon.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="js/sHover.min.js" type="text/javascript"></script>
+<script src="js/jquery.panelslider.min.js" type="text/javascript"></script>
+
+<script>window.jQuery || document.write('<script src="js/jquery-2.1.1.min.js"><\/script>')</script>
+
+<script src="js/jquery-2.1.1.min.js"></script> 
+<script>  
+	window.onload=function(){
+
+		 var a=new sHover("sHoverItem","sIntro");
+		 a.set({
+		 	slideSpeed:5,
+		 	opacityChange:true,
+		 	opacity:80
+		 });
+
+	}
+$(document).ready(function(e){
+		var w=document.body.clientWidth;
+		$('#go_up').hide();
+		if(w<=720){
+					$('#go_up').hide();
+		
+		}
+		
+		if(w<=980){
+			$('.click_menu').click(function(){
+			$(this).children('.phone').slideDown()
+			$(this).children('.phone').css('background','rgba(0,0,0,0.8)').css('box-shadow','0 3px 3px rgba(0,0,0,0.6)')
+			return false
+		})
+			$('.click_menu .phone').hover(function(){},function(){
+			$(this).slideUp()
+			$(this).css('background','none').css('box-shadow','none')
+			})			}
+		$(window).scroll(function(){ 
+			
+		 
+				if ($(window).scrollTop()>300&&w>720){  
+					$('header').css('background','rgba(255,255,255,1)').css('box-shadow','0 2px 4px rgba(0,0,0,0.5)');
+					$('#go_up').show();
+				}  
+				else  
+				{  
+					$('header').css('background','none').css('box-shadow','none');  
+					$('#go_up').hide();
+				}  
+		
+		}) 
+		$('.work_tab a').click(function(){
+			$('.work_tab a').removeClass('work_now')
+			$(this).addClass('work_now')
+			$('.pic_list li').hide()
+		   $($(this).attr('href')).show(500)
+		   return false
+		})
+		$('.Brochures').click(function(){
+			$('.pic_list li').hide()
+			$('.Brochures_t').show(500)
+			})
+		$('#all').click(function(){
+			$('.pic_list li').show(500)
+		})
+	
+	/*	$('.click_menu').click(function(){
+			$(this).children('.phone').slideDown()
+			$(this).children('.phone').css('background','rgba(0,0,0,0.5)').css('box-shadow','0 3px 3px rgba(0,0,0,0.6)')
+			return false
+		})
+		$('.click_menu .phone').hover(function(){},function(){
+			$(this).slideUp()
+			$(this).css('background','none').css('box-shadow','none')
+			})*/
+			
+			
+		 var speed = 1200;//滚动速度
+			var h=document.body.clientHeight;
+			
+            //回到顶部
+            $("#go_up").click(function () {
+			  	$('html,body').animate({
+					scrollTop: '0px'
+
+				},
+				speed);			
+            });
+			//
+	   var toggle = $('#ss_toggle');
+	    var menu = $('#ss_menu');
+	    var rot;
+	    $('#ss_toggle').on('click', function (ev) {
+	        rot = parseInt($(this).data('rot')) - 180;
+	        menu.css('transform', 'rotate(' + rot + 'deg)');
+	        menu.css('webkitTransform', 'rotate(' + rot + 'deg)');
+	        if (rot / 180 % 2 == 0) {
+	            toggle.parent().addClass('ss_active');
+	            toggle.addClass('close');
+	        } else {
+	            toggle.parent().removeClass('ss_active');
+	            toggle.removeClass('close');
+	        }
+	        $(this).data('rot', rot);
+	    });
+	    menu.on('transitionend webkitTransitionEnd oTransitionEnd', function () {
+	        if (rot / 180 % 2 == 0) {
+	            $('#ss_menu div i').addClass('ss_animate');
+	        } else {
+	            $('#ss_menu div i').removeClass('ss_animate');
+	        }
+	    });
+		
+    });  
+</script>  
+</head>
+
+<body>
+<header>
+        <div class="header_logo"><a href="#"><img src="images/oshine-logo-black.png"></a></div>
+        <nav>
+        	<ul class="pc">
+            	<li><a href="#" class="nav_now">Home</a></li>
+                <li><a href="#">Pages</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">SINGLE PORTFOLIO</a></li>
+                <li><a href="#">Headers</a></li>
+                <li><a href="#">Journal</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Shortcodes</a></li>
+            </ul>
+        </nav>
+        
+        <div class="header_icon">
+        	<ul>
+            	<li><a href="#"><i class="icon-search"></i></a></li>
+            	<li class="click_menu"><a href="#"><i class="fa fa-bars"></i></a>
+            		<ul class="phone">
+                        <li class="home"><a class="nav_now">Home</a></li>
+                        <li><a href="#" class="menu">Pages</a></li>
+                        <li><a href="#" class="menu">Portfolio</a></li>
+                        <li><a href="#" class="menu">SINGLE PORTFOLIO</a></li>
+                        <li><a href="#" class="menu">Headers</a></li>
+                        <li><a href="#" class="menu">Journal</a></li>
+                        <li><a href="#" class="menu">Shop</a></li>
+                        <li><a href="#" class="menu">Shortcodes</a></li>
+            </ul>
+                </li>
+            	<li><a href="#"><i class="icon-icon_bag_alt"></i></a></li>
+            </ul>
+        </div>
+</header>
+<section id="banner">
+	<div class="inner">
+    	<div class="banner_txt">
+            <h4>MALING THE WEB</h4>
+            <h2>STYLISH</h2>
+            <p>The Best or Nothing</p>
+        </div>
+    </div>
+</section>
+<section id="about">
+	<div class="inner">
+    	<h3>WE ARE OSHINE</h3>
+        <h6>A beautiful responsive multi-purpose wordpress theme</h6>
+        <div class="decoration"><i class="fa fa-stop"></i></div>
+        <p>Oshine comes with 12 unique and stunning demos. We have crafted each and every demo <br>with extensive care and precision and the theme is power packed yet easy to use.</p>
+    </div>
+</section>
+<div id="tab">
+	<ul>
+    	<li><a href="#">
+        	<i class="icon-strategy"></i>
+            <h5>12 DEMOS</h5>
+        </a></li>
+    	<li><a href="#">
+        	<i class="icon-tools2"></i>
+            <h5>12 DEMOS</h5>
+        </a></li>
+    	<li><a href="#">
+        	<i class="icon-genius"></i>
+            <h5>12 DEMOS</h5>
+        </a></li>
+    	<li><a href="#">
+        	<i class="icon-hotairballoon"></i>
+            <h5>12 DEMOS</h5>
+        </a></li>
+    </ul>
+    <div class="clear"></div>
+</div>
+<article id="info">
+    <div class="inner">
+        <ul class="info_left">
+            <li>
+                <h5><i class="icon-genius"></i>MODERN DESIGN</h5>
+                <p>Proin facilisis varius nunc. Curabitur eros risus, ultrices et dui ut, luctus accumsan nibh. Fusce convallis sapien placerat tellus suscipit vehicula.</p>
+            </li>
+            <li>
+                <h5><i class="icon-tools-2"></i>MODERN DESIGN</h5>
+                <p>Proin facilisis varius nunc. Curabitur eros risus, ultrices et dui ut, luctus accumsan nibh. Fusce convallis sapien placerat tellus suscipit vehicula.</p>
+            </li>
+            <li>
+                <h5><i class="icon-lightbulb"></i>MODERN DESIGN</h5>
+                <p>Proin facilisis varius nunc. Curabitur eros risus, ultrices et dui ut, luctus accumsan nibh. Fusce convallis sapien placerat tellus suscipit vehicula.</p>
+            </li>
+        </ul>
+        <ul class="info_right">
+        	<li>
+                <h5><i class="icon-icon_loading"></i>MODERN DESIGN</h5>
+                <p>Proin facilisis varius nunc. Curabitur eros risus, ultrices et dui ut, luctus accumsan nibh. Fusce convallis sapien placerat tellus suscipit vehicula.</p>
+            </li>
+            <li>
+                <h5><i class="icon-icon_bag_alt"></i>MODERN DESIGN</h5>
+                <p>Proin facilisis varius nunc. Curabitur eros risus, ultrices et dui ut, luctus accumsan nibh. Fusce convallis sapien placerat tellus suscipit vehicula.</p>
+            </li>
+            <li>
+                <h5><i class="icon-basket"></i>MODERN DESIGN</h5>
+                <p>Proin facilisis varius nunc. Curabitur eros risus, ultrices et dui ut, luctus accumsan nibh. Fusce convallis sapien placerat tellus suscipit vehicula.</p>
+            </li>
+        </ul>
+        <div class="clear"></div>
+    </div>
+</article>
+<div id="fix"></div>
+<article id="work">
+	<div class="inner">
+    	<div class="work_top">
+            <h3>OUR WORK</h3>
+            <h6>A beautiful responsive multi-purpose wordpress theme</h6>
+            <div class="decoration"><i class="fa fa-stop"></i></div>
+        </div>
+    </div>
+    <div class="work_list">
+            <ul class="work_tab">
+            	<li><a class="work_now" id="all">All</a></li>
+                <li><a href="#Brochures" class="Brochurse">Brochures</a></li>
+                <li><a href="#Mobile">Mobile</a></li>
+                <li><a href="#Slider">Slider</a></li>
+                <li><a href="#Videos">Videos</a></li>
+                <li><a href="#Web">Web</a></li>
+                <div class="clear"></div>
+            </ul>
+            <ul class="pic_list">
+            	<li id="Brochures_t" class="sHoverItem" >
+                	<a href="#" class="sIntro">
+                    	<h4>Left Fixed Sidebar</h4>
+                        <span>Classic . Photography . Videos .</span>
+                	</a>
+                <img src="images/road-product-650x385.jpg">
+                </li>
+                <li id="Brochures" class="sHoverItem">
+                	<a href="#" class="sIntro">
+                    	<h4>Left Fixed Sidebar</h4>
+                        <span>Classic . Photography . Videos .</span>
+                	</a>
+                    <img src="images/s3-650x385.jpg">
+                </li>
+                <li id="Mobile" class="sHoverItem">
+                	<a href="#" class="sIntro">
+                    	<h4>Left Fixed Sidebar</h4>
+                        <span>Classic . Photography . Videos .</span>
+                	</a>
+                    <img src="images/Vinyl-Record-PSD-full-650x385.jpg">
+                </li>
+                <li id="Slider" class="sHoverItem" >
+                	<a href="#" class="sIntro">
+                    	<h4>Left Fixed Sidebar</h4>
+                       	<span>Classic . Photography . Videos .</span>
+                	</a>
+                    <img src="images/poster-frame-650x385.jpg">
+                </li>
+                <li id="Videos" class="sHoverItem">
+                	<a href="#" class="sIntro">
+                    	<h4>Left Fixed Sidebar</h4>
+                        <span>Classic . Photography . Videos .</span>
+                	</a>
+                    <img src="images/wanderlust07-650x385.jpg">
+                </li>
+                <li id="Web" class="sHoverItem"> 
+                	<a href="#"class="sIntro">
+                    	<h4>Left Fixed Sidebar</h4>
+                        <span>Classic . Photography . Videos .</span>
+                	</a>
+                    <img src="images/oshin-model-0011-650x385.jpg">
+                </li>
+                <div class="clear"></div>
+            </ul>
+        	<div class="work_btn"><a href="#">VIEW ALL WORK</a></div>
+        </div>
+</article>
+<div id="twitter">
+	<div class="twitter_content">
+    	<i class="fa fa-twitter"></i>
+        <p>RT @<a href="#">InteractiveAU</a>: Growth hacking is marketing that doesnt scale says<br> <a href="#">https://t.co/BrrwDbR2Pn</a></p>
+        <a href="#" class="twitter_name">@envato</a>
+	</div>
+</div>
+<section id="clients">
+     	<div class="clients_top">
+            <h3>OUR CLIENTS</h3>
+            <h6>A beautiful responsive multi-purpose wordpress theme</h6>
+            <div class="decoration"><i class="fa fa-stop"></i></div>
+        </div>
+        <div class="clients_left">
+        	<p>pulp</p>
+        </div>
+        <div class="clients_right">
+        	<p>vantage</p>
+
+        </div>
+        <div class="clear"></div>
+</section>
+<section id="buy">
+	<h3>GET IN TOUCH</h3>
+    <h6>Have an idea or a project, lets collaborate and build some awesome stuff</h6>
+    <div class="buy_btn"><a href="#">BUY NOW</a></div>
+</section>
+
+
+<footer>
+	<div class="inner">
+    	<div class="footer_content">
+        	<ul>
+            	<div><a href="#"><img src="images/oshin-black-logo.png"></a></div>
+                <p>Ea mei nostrum imperdiet deterruisset, <br>mei ludus efficiendi ei. Sea summo <br>mazim ex, ea errem eleifend <br>definitionem vim. Detracto erroribus et<br> mea.
+                </p>
+            	<li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                <div class="clear"></div>
+            </ul>
+        	<ul class="list_recent">
+            	<li>
+                    <h4>Recent Posts</h4>
+                    <div><img src="images/oshin-ipad-mock-75x50.jpg"></div>
+                    <p>Oshine – a Creative<br>Multipurpose WordPress <br>theme</p>
+                    <time>October 10, 2014</time>
+                </li>
+                <li>
+                    <div><img src="images/oshin-ipad-mock-75x50.jpg"></div>
+                    <p>Oshine – a Creative<br>Multipurpose WordPress <br>theme</p>
+                    <time>October 10, 2014</time>
+                </li>
+            </ul>
+        	<ul class="footer_nav">
+            	<h4>Links</h4>
+            	<li class="footer_nav_now"><i class="fa fa-angle-right"></i><a href="#" class="footer_nav_now">Home</a></li>
+            	<li><i class="fa fa-angle-right"></i><a href="#">About Us</a></li>
+            	<li><i class="fa fa-angle-right"></i><a href="#">Team</a></li>
+            	<li><i class="fa fa-angle-right"></i><a href="#">Blog</a></li>
+            	<li><i class="fa fa-angle-right"></i><a href="#">Contact</a></li>
+            </ul>
+        	<ul class="instagram">
+           	  <h4>From Instagram</h4>
+                <li><a href="#"><h4>Sidebar</h4></a><img src="images/8c9609f5b2a9b3d02ef5c09353f24100.jpg"></li>
+                <li><a href="#"><h4>Sidebar</h4></a><img src="images/8925690044e337f4d9debf2c6cd32bc3.jpg"></li>
+                <li><a href="#"><h4>Sidebar</h4></a><img src="images/de8c453d761ac7766e88f163e9edeae8.jpg"></li>
+                <li><a href="#"><h4>Sidebar</h4></a><img src="images/536aa2e2a7f4164e20468743ed6e2f70.jpg"></li>
+                <li><a href="#"><h4>Sidebar</h4></a><img src="images/b77b591b7fb67676812d05cddee8237e.jpg"></li>
+                <li><a href="#"><h4>Sidebar</h4></a><img src="images/1c3913c0bb34fc46d7f5f2a6bccb86aa.jpg"></li>
+                <li><a href="#"><h4>Sidebar</h4></a><img src="images/96015b4ff95f287dabad214d239852cc.jpg"></li>
+                <li><a href="#"><h4>Sidebar</h4></a><img src="images/6b01da5c35f3c0e472365147b36d9a72.jpg"></li>
+                <li><a href="#"><h4>Sidebar</h4></a><img src="images/8c9609f5b2a9b3d02ef5c09353f24100.jpg"></li>
+          </ul>
+          	<div class="clear"></div>
+        </div>
+    </div>
+     
+</footer>
+<div id="footer_icon">
+		
+		<div id='ss_menu'>
+		  <div>
+		    <i class="fa fa-facebook-f"></i>
+		  </div>
+		  <div>
+		    <i class="fa fa-twitter"></i>
+		  </div>
+		  <div>
+		    <i class="fa  fa-pinterest-p"></i>
+		  </div>
+		  <div>
+		    <i class="fa fa-dribbble"></i>
+		  </div>
+		  <div class='menu'>
+		    <div class='share' id='ss_toggle' data-rot='180'>
+		      <div class='circle'></div>
+		      <div class='bar'></div>
+		    </div>
+		  </div>
+		</div>
+		
+	</div>
+<div id="copy">Copyright Brand Exponents 2014. All Rights Reserved</div>
+<div id="go_up">
+	<a href="javascript:;"><i class="fa fa-chevron-up"></i></a>
+</div>
+
+</body></html>

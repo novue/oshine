@@ -1,0 +1,1004 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+	margin:0;
+	padding:0;
+}
+
+li{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+
+}
+h1,h2,h3,h4,h5,h6{
+	font-weight:normal;
+}
+input{
+	border:none;
+}
+img{
+	border:none;
+}
+.clear{
+	clear:both;
+	}
+body{
+	font-family:"Montserrat-Regular",Arial,"微软雅黑", Helvetica, sans-serif;
+}
+
+html,body{
+	width:100%;
+	height:100%
+	}
+#banner{
+	height:100%;
+	width:100%;
+	}
+.inner{
+	width:93.75%;
+	margin:0 auto;
+	}
+h3{
+	line-height:97px;
+	padding-top:65px;
+	font-size:24px;
+	}
+h6{
+	font-family:"crimson-italic";
+	font-size:18px;
+	color:#5f6263;
+	line-height:40px;
+	}
+.decoration{
+	position:relative;
+	width:90px;
+	margin:0 auto;
+	}
+.decoration i{
+	color:#e0a240;
+	line-height:86px;
+	font-size:10px;
+	transform:rotate(45deg)
+	}
+.decoration:before{
+	content:"";
+	display:block;
+	width:20px;
+	height:1px;
+	background:#e8e8e8;
+	position:absolute;
+	left:0;
+	top:50%;
+	}
+.decoration:after{
+	content:"";
+	display:block;
+	width:20px;
+	height:1px;
+	background:#e8e8e8;
+	position:absolute;
+	right:0;
+	top:50%;
+	}
+/*header start*/
+header{
+	width:95%;
+	position:fixed;
+	padding:20px 2.5%;
+	background:none;
+	transition:all 1s;
+	z-index:999;
+	}
+.header_logo{
+	float:left;
+	}
+header nav{
+	width:895px;
+	overflow:hidden;
+	float:left;
+	margin:0 auto;
+	position:absolute;
+	left:50%;
+	transform:translateX(-50%);
+	}
+.home a{
+	cursor:pointer;
+	}
+header nav ul{
+	overflow:hidden;
+	width:100%;
+	}
+header nav ul li{
+	float:left;
+	padding:0 21px;
+	}
+/*nav span{
+	display:none;
+	}*/
+header nav ul a{
+	line-height:50px;
+	color:#333;
+	font-size:12px;
+	letter-spacing:0.5px;
+	text-transform:uppercase;
+	font-family:"Montserrat-Regular" Arial, Helvetica, sans-serif ;
+	transition:all .3s;
+	}
+header nav ul a:hover{
+	color:#E0A240;
+	}
+
+/*header nav a {
+	display:inline-block;
+	position: relative;
+	-webkit-transition: color 0.3s;
+	-moz-transition: color 0.3s;
+	transition: color 0.3s;*/
+}
+/*header nav .pc a::before {
+	z-index:99999;
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	color: transparent;
+	content: '•';
+	text-shadow: 0 0 transparent;
+	font-size: 14px;
+	-webkit-transition: text-shadow 0.3s, color 0.3s;
+	-moz-transition: text-shadow 0.3s, color 0.3s;
+	transition: text-shadow 0.3s, color 0.3s;
+	
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	transform: translateX(-50%);
+	pointer-events: none;
+}
+
+header nav .pc a:hover::before,
+header nav .pc a:focus::before {
+	color: #E0A240;
+	text-shadow: 8px 0 #E0A240, -8px 0 #E0A240;
+}
+
+header nav .pc a:hover,
+header nav .pc a:focus {
+	color: #E0A240;
+}*/
+
+
+#header_icon ul li>.phone{
+	display:none;}
+.nav_now{
+	color:#E0A240;
+	}
+.header_icon{
+	float:right;
+	}
+.header_icon ul li{
+	float:left;
+	padding:0 10px;
+	}
+.header_icon ul li:last-child{
+	padding-right:0;
+	}
+.header_icon ul a{
+	text-align:center;
+	color:#333;
+	line-height:50px;
+	}
+.header_icon ul li:nth-child(1) a{
+	font-size:16px;
+	}
+.header_icon ul li:nth-child(2) a{
+	font-size:16px;
+	position:relative;}
+.header_icon ul li:nth-child(3) a{
+	font-size:16px;
+	}
+.header_icon ul li>.phone{
+	display:none;
+	overflow:hidden;
+	position:absolute;
+	right:0;
+	top:60px;
+	z-index:9999;
+	}
+.header_icon ul li>.phone li{
+	float:none;
+	}
+.header_icon ul li>.phone .home a{
+	color:#E0A240;
+	cursor:pointer;
+	}
+
+.header_icon ul li>.phone li a{
+	display:inline-block;
+	float:none;
+	line-height:50px;
+	color:#333;
+	font-size:12px;
+	letter-spacing:0.5px;
+	color:#fff;
+	text-transform:uppercase;
+	font-family:"Montserrat-Regular" Arial, Helvetica, sans-serif ;
+	transition:all .3s;
+	}
+.header_icon ul li>.phone li a:hover{
+	color:#E0A240;
+	}
+/*banner start*/
+#banner{
+	background:url(../images/oshin-slide-1.jpg) no-repeat center top /cover;
+	position:relative;
+	overflow:hidden;
+	}
+.banner_txt{
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	text-align:center;
+	}
+.banner_txt h2{
+	display:block;
+	font-size:50px;
+	line-height:102px;
+	padding:0 50px;
+	font-weight:bolder;
+	border:#000 solid 8px;
+	letter-spacing:5px;
+	font-family:"Arial";
+	color:#000;
+	animation:header2 1s;
+	}
+.banner_txt h4{
+	line-height:80px;
+	letter-spacing:5px;
+	font-size:22px;
+	color:#222;
+	font-weight:normal;
+	font-family:"Montserrat-Regular";
+	transform:translateX(0);
+	animation:header1 1s;
+	}
+@keyframes header1{
+	0%{
+		transform:translateX(-200%);
+		opacity:0;
+		}
+	100%{
+		transform:translateX(0);
+		opacity:1;
+		}
+	}
+@keyframes header2{
+	0%{
+		transform:translateY(-200%);
+		opacity:0;
+		}
+	100%{
+		transform:translateY(0);
+		opacity:1;
+		}
+	}
+@keyframes header3{
+	0%{
+		transform:translateX(200%);
+		opacity:0;
+		}
+	100%{
+		transform:translateX(0);
+		opacity:1;
+		}
+	}
+.banner_txt p{
+	line-height:117px;
+	font-size:28px;
+	color:#222;
+	font-family:"crimson-italic";
+	transform:translateX(0);
+	font-style:italic;
+	animation:header3 1s;
+	}
+/*about start*/
+#about{
+	height:828px;
+	background:url(../images/oshin-mockups-1024x377.png) no-repeat center bottom;
+	text-align:center;
+	}
+#about p{
+	color:#5f6263;
+	line-height:32px;
+	font-weight:100;
+	font-size:18px;
+	font-family:"Raleway-Regular";
+	}
+/*tab start*/
+#tab{
+/*	height:250px;*/
+	width:100%;
+	}
+#tab ul{
+	width:100%;
+	height:100%;
+	background:#ddd;
+	}
+#tab ul li{
+	float:left;
+	width:25%;
+	background:#B8B8B8;
+	transition:all 0.6s;
+	}
+#tab li a{
+	text-align:center;
+	color:#000;
+	display:block;
+	transition:all 0.6s;
+	}
+#tab li i{
+	display:block;
+	line-height:84px;
+	font-size:60px;
+	padding-top:16.3%;
+	}
+#tab li h5{
+	line-height:30px;
+	padding-bottom:20.14%;
+	font-size:14px;
+	}
+#tab li:nth-child(2n){
+	background:#edf0f2;
+	}
+#tab li:nth-child(2n+1){
+	background:#f2f5f8;
+	}
+#tab ul li:hover{
+	background:#646464;
+	}
+#tab ul li:hover a{
+	color:#EDEDED;
+	transform:translateY(-5%)
+	}
+/*info start*/
+#info{
+	background:url(../images/iphone-oshin-513x1024.png) no-repeat center center;
+	background-size:auto 80%;
+	/*background-size:contain;
+	transform:scale(0.8);*/
+	}
+#info h5{
+	line-height:53px;
+	font-size:16px;
+	position:relative;
+	}
+#info p{
+	font-family:"Raleway-Regular";
+	line-height:26px;
+	color:#686b73;
+	font-size:14px;
+	padding-bottom:38px;
+	font-weight:lighter;
+	}
+#info .inner{
+	padding:110px 1.7% 0% 1.7%;
+	}
+#info ul{
+	width:342px;
+	}
+#info ul li{
+	padding-left:16.8%;
+	}
+#info ul i{
+	font-weight:normal;
+	font-size:28px;
+	color:#e0a240;
+	padding-right:30px;
+	position:absolute;
+	left:-16.8%;
+	top:50%;
+	transform:translateY(-50%);
+	}
+.info_left{
+	float:left;
+	}
+.info_right{
+	float:right;
+	}
+#fix{
+	background:url(../images/wanderlust01.jpg) center center /cover;
+	width:100%;
+	height:400px;
+	background-attachment:fixed;
+	}
+/*work start*/
+#work{
+	padding-bottom:90px;
+	}
+.work_top{
+	text-align:center;
+	}
+.work_tab{
+	width:582px;
+	position:absolute;
+	left:50%;
+	transform:translateX(-50%);
+	overflow:hidden;
+	}
+.work_tab li{
+	float:left;
+	padding:0 4px;
+	}
+.work_tab li a{
+	padding:0 18px;
+	display:block;
+	line-height:40px;
+	color:#222;
+	font-size:14px;
+	text-transform:uppercase;
+	font-family:"Raleway-Regular";
+	cursor:pointer;
+	transition:all .5s;
+	margin:1px;
+	}
+.work_tab li a:hover{
+	color:#E0A240;
+	}
+.work_tab .work_now{
+	color:#e0a240;
+	border:1px #e0a240 solid;
+	}
+.pic_list{
+	width:30%;
+	padding-top:54px;
+	width:100%;
+	padding-bottom:40px;
+	}
+.pic_list li:nth-child(3n){
+	margin:0;
+	margin-top:40px;
+	}
+.pic_list li{
+	display:block;
+	float:left;
+	font-size:0px;
+	width:30%;
+	margin-right:5%;
+	overflow:hidden;
+	/*position:relative;*/
+	/*padding-top:40px;*/
+	margin-top:40px;
+	}
+.pic_list li a{
+	opacity:0;
+	width:100%;
+	height:100px;
+	padding-top:40px;
+	background:#000;
+	/*position:absolute;
+	z-index:9;*/
+	/*transition:all 1s;*/
+	text-align:center;
+	vertical-align:middle;
+	}
+.pic_list a h4{
+	font-size:14px;
+	font-weight:bold;
+	color:#fff;
+	/*position:relative;
+	z-index:99;*/
+	line-height:40px;
+	margin-top:80px;
+	}
+.pic_list a span{
+	word-spacing:1px;
+	font-size:12px;
+	color:#fff;
+	/*position:relative;
+	z-index:99;*/
+	}
+.pic_list li:hover a{
+	opacity:0.8;
+	}
+.pic_list li img{
+	width:100%;
+	}
+
+.work_btn a{
+	color:#000;
+	display:inline-block;
+	border:2px #000 solid;
+	line-height:44px;
+	padding:0 20px;
+	font-size:12px;
+	transition:all 0.5s;
+	}
+.work_btn a:hover{
+	color:#fff;
+	background:#f0b452;
+	border:2px #f0b452 solid;
+	}
+.work_btn{
+	text-align:center;
+	font-family:"Raleway-Regular";
+	}
+/*twitch start*/
+#twitter{
+	position:relative;
+	height:412px;
+	background:#f2f3f8;
+	text-align:center;
+	}
+#twitter i{
+	font-size:100px;
+	color:#dfdfdf;
+	line-height:108px;
+	}
+#twitter p, #twitter p a{
+	font-family:"Raleway-Regular";
+	font-size:18px;
+	color:#666;
+	line-height:40px;
+	}
+ #twitter p a{
+	 color:#e0a240;
+	 }
+.twitter_content{
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%)
+	}
+.twitter_name{
+	font-family:"Montserrat-Regular";
+	line-height:30px;
+	font-size:12px;
+	text-transform:uppercase;
+	color:#e0a240;
+	}
+/*clients start*/
+#clients{
+	overflow:hidden;
+	padding:0 1% 6.5% 1%;
+	}
+.clients_top{
+	text-align:center;
+	padding-bottom:60px;
+	}
+.clients_left,.clients_right{
+	height:49%;
+	width:49%;
+	text-align:center;
+	background-color:#f4f4f4;
+	transition:all .5s;
+	}
+
+.clients_left p{
+	text-transform:uppercase;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:80px;
+	font-weight:900;
+	line-height:80px;
+	padding: 24.1% 0;}
+.clients_right p{
+	font-family:"Times New Roman", Times, serif;
+	font-size:72px;
+	font-weight:bold;
+	line-height:80px;
+	position:relative;
+	padding: 24.1% 0;
+	/*position:relative;*/
+	position:absolute;
+	background:url(../images/clients_bj.png) no-repeat 30% -300%;
+	background-origin:content-box;
+	background-color:#f4f4f4;
+	width:100%
+	}
+
+/*.clients_right p:before{
+	content:'';
+	display:block;
+	position:absolute;
+	top:0%;
+	left:0;
+	background:url(../images/clients_bj.png) no-repeat;
+	height:55px;
+	width:67px;
+	
+	
+	}*/	
+/*.clients_right p:before{
+	content:'';
+	display:block;
+	width:100%;
+	height:100%;
+	background:url(../images/clients_bj.png) no-repeat left top;
+	position:absolute;
+	left:31.5%;
+	top:32%;
+	}*/
+.clients_left:hover{
+	margin:0.25% 0 0 0.25%;
+	width:48%;
+	}
+.clients_right:hover{
+	margin:0.25% 0 0 0.25%;
+	width:48%;
+	}
+.clients_left img,.clients_right img{
+	width:100%;
+	}
+.clients_left{
+	float:left;
+	}
+.clients_right{
+	float:right;
+	position:relative;
+	
+	}
+/*.vantage_img{
+	position:absolute;
+	left:30%;
+	top:40%;
+	}*/
+/*buy start*/
+#buy{
+	padding:85px 0;
+	background:#000 url(../images/bg.png);
+	color:#fff;
+	text-align:center;
+	}
+
+#buy h3{
+	padding:0;
+	line-height:50px;
+	}
+#buy h6{
+	font-family:"Montserrat-Regular";
+	font-style:normal;
+	color:#fefefe;
+	font-weight:normal;
+	}
+.buy_btn{
+	padding:18px 0;
+	}
+.buy_btn a{
+	display:inline-block;
+	padding:0 21px;
+	line-height:44px;
+	font-family:Raleway-Regular;
+	background:none;
+	color:#f0b452;
+	font-size:14px;
+	border:2px #f0b452 solid;
+	transition:all .5s;
+	}
+.buy_btn a:hover{
+	background:#f0b452;
+	color:#fff;
+	border:2px #f0b452 solid;
+	}
+/*footer*/
+footer{
+	padding-top:50px;
+	background:#f2f3f8;
+	}
+.footer_content{
+	padding-bottom:70px;
+	}
+.footer_content ul{
+	width:22.5%;
+	padding-left:2.5%;
+	float:left;
+	}
+.footer_content ul:nth-child(1){
+	padding-top:20px;
+	}
+.footer_content ul:nth-child(1) p{
+	padding:30px 0;
+	font-size:14px;
+	line-height:24px;
+	color:#838383;
+	font-family:"Raleway-Regular";
+	}
+.footer_content ul:nth-child(1) li{
+	float:left;
+	line-height:30px;
+	width:30px;
+	border-radius:15px;
+	border:1px solid #f0b452;
+	text-align:center;
+	margin-right:13px;
+	transition:all 1s;
+	}
+.footer_content ul:nth-child(1) li:hover{
+	background:#f0b452;
+	}
+.footer_content ul:nth-child(1) li:hover a{
+	color:#fff;
+	}
+.footer_content ul:nth-child(1) a{
+	color:#f0b452;
+	transition:all 1s;
+	}
+.footer_content ul h4{
+	font-size:12px;
+	font-weight:bold;
+	color:#474747;
+	line-height:60px;
+	}
+.list_recent div{
+	float:left;
+	padding-right:10px;
+	padding-top:8px;
+	}
+.list_recent img{
+	width:50px;
+	}
+.list_recent p{
+	color:#838586;
+	font-size:14px;
+	line-height:26px;
+	font-family:"Raleway-Regular";
+	}
+.list_recent li{
+	padding-bottom:20px;
+	}
+.list_recent time{
+	color:#838586;
+	font-size:12px;
+	line-height:33px;
+	text-transform:uppercase;
+	font-family:"Raleway-Regular";
+	}
+.footer_nav{
+	color:#838586;
+	font-family:"Raleway-Regular";
+	}
+.footer_nav .footer_nav_now{
+	color:#f0b452;
+	font-family:"Raleway-Regular";
+	}
+.footer_nav li i{
+	padding-right:15px;
+	}
+.footer_nav li a{
+	color:#838586;
+	font-size:12px;
+	line-height:33px;
+	text-transform:uppercase;
+	}
+.footer_nav li:hover a{
+	color:#f0b452;
+	}
+.footer_content .instagram{
+	width:22.5%;
+	float:left;
+	}
+.instagram li{
+	width:70px;
+	height:70px;
+	overflow:hidden;
+	text-align:center;
+	float:left;
+	margin:0 15px 15px 0;
+	}
+.instagram li img{
+	height:100%;
+	}
+.instagram li:nth-child(4) img{
+	width:100%;
+	height:auto;
+	}
+.instagram li:nth-child(8) img{
+	width:100%;
+	height:auto;
+	}
+.instagram li:nth-child(9) img{
+	width:100%;
+	height:auto;
+	}
+.instagram li a{
+	opacity:0;
+	width:70px;;
+	height:70px;;
+	background:#000;
+	position:absolute;
+	z-index:9;
+	transition:all 1s;
+	text-align:center;
+	vertical-align:middle;
+	}
+.instagram a h4{
+	font-size:12px;
+	color:#fff;
+	position:relative;
+	z-index:99;
+	line-height:70px;
+	}
+.instagram li:hover a{
+	opacity:0.8;
+	}
+#copy{
+	font-family:"Raleway-Regular";
+	line-height:70px;
+	width:100%;
+	text-align:center;
+	font-size:14px;
+	color:#838586;
+	background:#fff;
+	}
+#footer_icon{
+	width:100%;
+	display:none;
+	}
+#go_up{
+	text-align:center;
+	width:40px;
+	height:40px;
+	background:#e0a240;
+	position:fixed;
+	right:20px;
+	bottom:97px;
+	z-index:9999;}
+#go_up a{
+	display:block;
+	color:#fff;
+	font-size:12px;
+	line-height:40px;
+	}
+
+@media screen and (max-width:1200px){
+
+header nav{
+	width:72%;}
+header nav ul{
+	width:100%;
+	}
+header nav ul li{
+	float:left;
+	padding:0 2.3%;
+	}
+header nav ul a{
+	line-height:50px;
+	color:#333;
+	font-size:12px;
+	letter-spacing:0.5px;
+	text-transform:uppercase;
+	font-family:"Montserrat-Regular" Arial, Helvetica, sans-serif ;
+	transition:all .3s;
+	}
+.instagram li{
+	margin:0 5% 5% 0;}	
+}
+	
+@media screen and (max-width:980px){
+	
+
+
+header nav .pc{
+	display:none;
+	}
+
+header nav{
+	width:69%;
+	position:absolute;
+	left:50%;
+	z-index:9999;
+	text-align:center;
+	}
+	
+#header_icon ul li>.phone li{
+	float:none;
+	}
+
+.instagram li{
+	margin:0 5% 5% 0;}	
+
+.menu{
+	display:none;
+	}
+.menu a{
+	transition:all 1s;
+	}
+/*#tab{
+	height:200px;
+	}*/
+/*#tab li i{
+	padding:16.3% 0 0 0;
+	}
+#tab li h5{
+	padding:0 0 20.14% 0;
+	}*/
+	
+	
+#info{
+	background:url(../images/iphone-oshin-513x1024.png) no-repeat 130% 70%;
+	background-size:auto 80%;
+	}
+#info h5{
+	line-height:53px;
+	font-size:16px;
+	position:relative;
+	}
+#info p{
+	font-family:"Raleway-Regular";
+	line-height:26px;
+	color:#686b73;
+	font-size:14px;
+	padding-bottom:38px;
+	font-weight:lighter;
+	}
+#info .inner{
+	padding:80px 0 50px 5%;
+	}
+#info ul{
+	width:60%;
+	}
+.info_left{
+	float:none;
+	}
+.info_right{
+	float:none;
+	}
+.pic_list li{
+	padding-right:0;
+	margin-right:5%;
+	width:47.5%;
+	height:auto;
+	}
+.pic_list li:nth-child(2n+1){
+	margin-right:5%;
+	}
+.pic_list li:nth-child(2n){
+	margin-right:0px;
+	}
+.pic_list li a{
+	opacity:0;
+	width:100%;
+	height:100%;
+	background:#000;
+/*	position:absolute;
+	z-index:9;
+	transition:all 1s;*/
+	text-align:center;
+	vertical-align:middle;
+	}
+footer{
+	padding:5% 0 0 0;}
+.footer_content .instagram li:nth-child(n+10){
+	display:none;
+	}
+.panel {
+      display:block;
+      width: 220px;
+      padding: 20px;
+      background-color: #333;
+      box-shadow: inset 0 0 5px 5px #222;
+    }	
+}
+
+@media screen and (max-width:720px){
+
+footer{
+	display:none;}
+#footer_icon{
+	display:block;
+	}
+#go_up{
+	display:none;}
+	
+@media screen and (max-width:640px){
+
+footer{
+	display:none;}
+#footer_icon{
+	display:block;
+	}
+#go_up{
+	display:none;}
+
+
+	}
